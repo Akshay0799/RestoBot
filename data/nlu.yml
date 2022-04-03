@@ -1,0 +1,178 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: confirm
+  examples: |
+    - hmmm
+    - okay
+    - alright
+
+- intent: decline
+  examples: |
+    - Nope
+    - Nah
+    - no
+    - I don't want to
+    - No, thank you
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: contact_team
+  examples: |
+    - I want to book seats
+    - reserve seats
+    - I'd like to reserve seats over there
+    - I want to reserve seats
+
+- intent: eat_out
+  examples: |
+    - Find restaurants around me
+    - I'd like to eat outside
+    - Eat outside
+    - Go to a restaurant
+    - I wanna go to a restaurant
+    - Find me restaurants
+    - Find me some restaurants
+
+- intent: check_weather
+  examples: |
+    - What's the weather now ?
+    - How's the weather today ?
+    - How is the weather ?
+    - Can you tell me how cold is it now ?
+    - Can you tell me how hot is it now ?
+    - Is it a pleasant day today ?
+    - Give me weather updates
+
+- intent: stop
+  examples: |
+    - stop
+    - nevermind
+    - please stop
+    - i want to stop
+    - stop the form
+
+- intent: faq/ask_address
+  examples: |
+    - What is the full address ? 
+    - Where is the restaurant located ? 
+    - what is the address of the restaurant ? 
+    - I want the address of the restaurant
+
+- intent: faq/ask_distance
+  examples: |
+    - How far is it ? 
+    - what's the distance from my house ? 
+    - How far is it from my house ? 
+    - Can you tell me the distance to the restaurant
+
+- intent: faq/ask_vaccine
+  examples: |
+    - Do they need vaccine proofs ?
+    - Do they check for vaccine doses ?
+    - do they allow me only if I'm vaccinated ?
+    - Do they only allow vaccinated customers ?
+    - Do we need Vaccine proofs ?
+
+- intent: faq/payment_modes
+  examples: |
+    - what payments modes do they offer
+    - Does the restaurant offer NFC payments ?
+    - Do they accept cash ?
+    - Do they accept credit cards for payment ?
+    - wallet payment mode ?
+
+- intent: faq/contact_no
+  examples: |
+    - How do I contact the restaurant ?
+    - Can you give me the restaurant's phone number ?
+    - I need the restaurant's phone number ?
+    - Give me their phone number ?

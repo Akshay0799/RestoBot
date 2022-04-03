@@ -1,0 +1,26 @@
+language: en
+
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: faq
+  - name: DIETClassifier
+    epochs: 100
+
+policies:
+  - name: MemoizationPolicy
+    max_history: 0
+  - name: TEDPolicy
+    max_history: 10
+    epochs: 100
+  - name: AugmentedMemoizationPolicy 
+    max_history: 0
+  - name: RulePolicy

@@ -1,0 +1,79 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: out of scope
+  steps:
+  - intent: outofscope
+  - action: utter_outofscope
+
+- rule: faq
+  steps:
+  - intent: faq
+  - action: utter_faq 
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+# - rule: Activate form
+#   steps:
+#   - intent: contact_team
+#   - action: name_form
+#   - active_loop: name_form
+- rule: Activate form
+  steps:
+  - intent: confirm
+  - action: name_form
+  - active_loop: name_form
+
+- rule: Submit form
+  condition:
+  - active_loop: name_form
+  steps:
+  - action: name_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_slots_values
+
+- rule: Activate food name form
+  steps:
+  - intent: eat_out
+  - action: food_type_form
+  - active_loop: food_type_form
+
+# - rule: Submit food name form
+#   condition:
+#   - active_loop: food_type_form
+#   steps:
+#   - action: food_type_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+  
+
+- rule: Activate restaurant name form
+  steps:
+  - action: action_maps_api
+  - action: restaurant_name_form
+  - active_loop: restaurant_name_form
+
+- rule: Submit restaurant name form
+  condition:
+  - active_loop: restaurant_name_form
+  steps:
+  - action: restaurant_name_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_faq_api
+  - action: utter_book_seats
+
+
