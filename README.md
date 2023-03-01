@@ -1,7 +1,7 @@
 # RestoBot
 
-RestoBot - A chatbot designed using RASA and hosted on Telegram to make reservations for restaurants.
+A chatbot designed using RASA and hosted on Telegram to make reservations for restaurants.
 
 ## Technologies Used
 
-Rasa, Telegram, Python
+Python, Rasa, Telegram API
