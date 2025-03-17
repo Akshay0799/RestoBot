@@ -4,4 +4,6 @@ A chatbot designed using RASA and hosted on Telegram to make reservations for re
 
 ## Technologies Used
 
-Python, Rasa, Telegram API
+* Python
+* Rasa
+* Telegram API
